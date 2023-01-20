@@ -1,13 +1,9 @@
 package com.example.trello.trello;
 
-import com.example.trello.trello.models.Customer;
-import com.example.trello.trello.repository.CustomerRepo;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
 import java.util.TimeZone;
 
@@ -23,7 +19,7 @@ public class TrelloApplication {
 	private void setTimeZone() {
 		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
 	}
-	@Bean
+	/*@Bean
 	public CommandLineRunner demo(CustomerRepo repository) {
 		return (args) -> {
 			// save a few customers
@@ -59,7 +55,7 @@ public class TrelloApplication {
 			// }
 			log.info("");
 		};
-	}
+	}*/
 
 
 }
