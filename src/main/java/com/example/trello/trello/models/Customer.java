@@ -9,6 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -20,6 +21,7 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
+@NoArgsConstructor
 @Table(name = "customer")
 @Entity
 public class Customer {
@@ -40,4 +42,10 @@ public class Customer {
     @UpdateTimestamp
     @Column(name="updated_at")
     private Date updatedAt;
+
+    public Customer(String name, Long age, String location) {
+        this.name = name;
+        this.age = age;
+        this.location = location;
+    }
 }
